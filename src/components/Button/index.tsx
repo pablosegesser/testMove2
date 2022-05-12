@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-use-before-define */
 import React from 'react'
-import { Button } from '../styles/globalStyle'
+import { Button } from '../../styles/globalStyle'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 text: string
@@ -9,7 +9,7 @@ className: string
 onClick?: React.MouseEventHandler<HTMLButtonElement>
 icon?: any
 }
-const ButtonForm: React.FC<ButtonProps> = ({
+const CustomButton: React.FC<ButtonProps> = ({
 text,
 icon,
 type,
@@ -22,4 +22,4 @@ className,
 {text}
 </Button>
 )
-export default ButtonForm
+export default CustomButton

@@ -1,12 +1,6 @@
-import './App.css';
-import { ThemeProvider } from 'styled-components'
-import { lightTheme } from './styles/globalStyle'
+import { AppRouter } from "./Routes";
 
-
-const App = () => (
-  <ThemeProvider theme={lightTheme}>
-      <title>GRANDEST APP WEB</title>
-  </ThemeProvider>
-)
-
+function App() {
+    return <AppRouter />;
+}
 export default App
