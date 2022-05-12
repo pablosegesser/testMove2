@@ -33,6 +33,10 @@ interface GlobalStyleProps {
   fontBold: {
     bold: string
     semiBold: string
+  },
+  device: {
+    mobile: string
+    tablet: string
   }
 }
 
@@ -45,7 +49,7 @@ export const lightTheme = {
   fontColor: {
     main: '#000000',
     header: '#FFFFFF',
-    button: '#6667AB',
+    button: '#FFFFFF',
     section: '#4D4D4D',
   },
   color: {
@@ -69,6 +73,10 @@ export const lightTheme = {
   fontBold: {
     bold: '700',
     semiBold: '400'
+  },
+  device: {
+    tablet: '900px',
+    mobile: '425px',
   }
 }
 
@@ -81,7 +89,7 @@ export const darkTheme = {
     fontColor: {
       main: '#FFFFFF',
       header: '#FFF',
-      button: '#6667AB',
+      button: '#FFFFFF',
     },
     color: {
       black: '#000',
@@ -104,6 +112,10 @@ export const darkTheme = {
     fontBold: {
       bold: '700',
       semiBold: '400'
+    },
+    device: {
+      tablet: '900px',
+      mobile: '425px',
     }
   }
 
@@ -375,24 +387,22 @@ export const ButtonContainer = styled.div`
     }
   }
 
-  @media (min-width: ${({ theme }) => theme.device.tablet}) {
-    display: none;
-  }
 `
 
 export const Button = styled.button`
   width: 100%;
-  height: 38px;
+  height: 36px;
   padding: 0;
+  border-radius: 20px;
   border: 2px solid ${({ theme }) => theme.bgColor.button};
   background-color: ${({ theme }) => theme.bgColor.button};
   color: ${({ theme }) => theme.fontColor.button};
   box-sizing: border-box;
   text-align: center;
   font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 27px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.1px;
   letter-spacing: -0.015em;
   cursor: pointer;
 
