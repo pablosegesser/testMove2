@@ -8,11 +8,11 @@ import {
   CardTextBody,
 } from "./card.styles";
 
-export const Card = ({ title, name, description, imgUrl }: CardTypes) => {
+export const Card = ({ title, name, description, imgUrl , className}: CardTypes) => {
   return (
-      <CardWrapper>
+      <CardWrapper className={className}>
         <CardImage background={imgUrl} />
-        <CardTextWrapper>
+        <CardTextWrapper className={className}>
           <CardTextDate>{name}</CardTextDate>
           <CardTextTitle>{title}</CardTextTitle>
           <CardTextBody>

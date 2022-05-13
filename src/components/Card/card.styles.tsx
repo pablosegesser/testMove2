@@ -3,10 +3,19 @@ import styled from "styled-components";
 export const CardWrapper = styled.div`
   display: grid;
   grid-template-columns: 260px;
-  grid-template-rows: 360px 80px 40px;
-  grid-template-areas: "image" "text" "stats";
+  grid-template-rows: 360px 80px;
+  grid-template-areas: "image" "text" ;
   background: white;
+  padding-left:15px;
   text-align: left;
+ 
+  &.horizontal {
+    grid-template-columns: 320px 320px 320px;
+    border: 1px solid black;
+    grid-gap: 15px;
+    grid-template-areas:
+    "image text text"
+  }
 `;
 
 export const CardImage = styled.div<{ background: string }>`
@@ -19,6 +28,12 @@ export const CardImage = styled.div<{ background: string }>`
 export const CardTextWrapper = styled.div`
   grid-area: text;
   margin-top: 20px;
+  position: relative;
+
+  &.centered {
+  justify-self: center;
+  align-self: center;
+}
 `;
 
 export const CardTextDate = styled.span`

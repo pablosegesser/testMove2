@@ -180,9 +180,6 @@ export const PageContent = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 
-  &.form-section {
-    padding: 0 140px 0 94px;
-
     div.button-container {
       width: 100%;
       display: flex;
@@ -202,40 +199,18 @@ export const PageContent = styled.div`
     padding-bottom: 20rem;
     overflow: scroll;
 
-    &.form-section {
-      top: 104px;
-      padding: 0 2rem 9rem 2rem;
-    }
   }
 `
 
 export const TitleContainer = styled.div`
   width: 100%;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  border-bottom: 1px solid ${({ theme }) => theme.color.black};
-  padding-right: 44px;
-  padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
-
-  &.form-section {
-    @media (min-width: ${({ theme }) => theme.device.tablet}) {
-      border: none;
-      justify-content: center;
-    }
-  }
+  padding-left: 82px;
+  margin-top: 2.5rem;
 
   @media (max-width: ${({ theme }) => theme.device.tablet}) {
-    padding-bottom: 12px;
-    margin-bottom: 20px;
-    padding-right: 0;
+    padding-left: 4px;
 
-    &.select-section {
-      border-bottom: none;
-      padding-bottom: 0;
-      margin-bottom: 1rem;
-    }
   }
 `
 
@@ -307,11 +282,11 @@ export const CardContainer = styled.div`
 
 export const Title = styled.h3`
   margin: 0;
-  font-family: 'ABChanel-Corpo';
+  font-family: 'Arial';
   font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 20.7px;
   letter-spacing: -0.015em;
   display: flex;
   align-items: center;
@@ -325,16 +300,12 @@ export const Title = styled.h3`
     align-self: flex-start;
   }
 
-  &.form-section {
-    @media (min-width: ${({ theme }) => theme.device.tablet}) {
-      font-size: 24px;
-    }
   }
 `
 
 export const Subtitle = styled.h6`
   margin: 0;
-  font-family: 'ABChanel-Corpo';
+  font-family: 'Arial';
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
