@@ -9,11 +9,14 @@ export const HeaderLayout = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
   background-color: ${({ theme }) => theme.bgColor.header};
   color: ${({ theme }) => theme.fontColor.header};
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 0.5s ease;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: 700;
+  line-height:13.8px;
+  justify-content: center;
 
- 
 `

@@ -1,3 +1,4 @@
+import { Button, ButtonContainer } from "../../styles/globalStyle";
 import { CardTypes } from "../../Types/cardTypes";
 import {
   CardWrapper,
@@ -8,7 +9,7 @@ import {
   CardTextBody,
 } from "./card.styles";
 
-export const Card = ({ title, name, description, imgUrl , className}: CardTypes) => {
+export const Card = ({ title, name, description, imgUrl , className, withAction}: CardTypes) => {
   return (
       <CardWrapper className={className}>
         <CardImage background={imgUrl} />
@@ -18,7 +19,12 @@ export const Card = ({ title, name, description, imgUrl , className}: CardTypes)
           <CardTextBody>
             {description}
           </CardTextBody>
-        </CardTextWrapper>
+          {withAction ? <ButtonContainer>
+           <Button type="button" className="secondary" onClick={()=>{}}>
+              START
+           </Button>
+        </ButtonContainer>: null }
+          </CardTextWrapper>
       </CardWrapper>     
   );
 };

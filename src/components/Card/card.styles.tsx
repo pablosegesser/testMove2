@@ -11,8 +11,9 @@ export const CardWrapper = styled.div`
  
   &.horizontal {
     grid-template-columns: 320px 320px 320px;
-    border: 1px solid black;
     grid-gap: 15px;
+    text-align: center;
+    grid-template-rows: 500px 0;
     grid-template-areas:
     "image text text"
   }

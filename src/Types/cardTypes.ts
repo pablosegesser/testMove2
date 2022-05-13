@@ -4,5 +4,6 @@ export type CardTypes = {
     description: string;
     imgUrl: string;
     className: string;
+    withAction: boolean;
   };
   

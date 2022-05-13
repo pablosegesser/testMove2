@@ -205,8 +205,26 @@ export const PageContent = styled.div`
 export const TitleContainer = styled.div`
   width: 100%;
   display: flex;
-  padding-left: 82px;
   margin-top: 2.5rem;
+
+  @media (max-width: ${({ theme }) => theme.device.tablet}) {
+    padding-left: 4px;
+
+  }
+`
+
+export const ButtonsContain = styled.div`
+  width: 100%;
+  display: flex;
+  height: 130px;
+  margin-top: 2.5rem;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  font-weight: 700;
+  line-height: 20px;
+  font-size: 1.5rem;
+  justify-content: space-around;
+  align-items: center;
 
   @media (max-width: ${({ theme }) => theme.device.tablet}) {
     padding-left: 4px;
@@ -285,6 +303,7 @@ export const Title = styled.h3`
   font-family: 'Arial';
   font-style: normal;
   font-weight: 700;
+  margin-left: 82px;
   font-size: 2rem;
   line-height: 20.7px;
   letter-spacing: -0.015em;
@@ -366,7 +385,7 @@ export const ButtonContainer = styled.div`
 `
 
 export const Button = styled.button`
-  width: 240px;
+  width: 200px;
   height: 36px;
   padding: 0;
   border-radius: 20px;
@@ -377,7 +396,7 @@ export const Button = styled.button`
   text-align: center;
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16.1px;
   letter-spacing: -0.015em;
   cursor: pointer;

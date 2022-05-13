@@ -7,7 +7,7 @@ interface HomeProps {}
 const Home: React.FunctionComponent<HomeProps> = () => {
     return (
         <>    
-        <Header/>
+        <Header text={""}/>
         <ButtonContainer>
         <Button type="button" className="secondary" onClick={()=>{}}>
           JOIN
