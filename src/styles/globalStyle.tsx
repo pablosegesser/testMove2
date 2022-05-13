@@ -294,11 +294,16 @@ export const CardContainer = styled.div`
     justify-content: space-between;
     margin-top: 5px;
   }
-
-  @media (min-width: ${({ theme }) => theme.device.tablet}) {
-    display: none;
-  }
-`
+  `
+  export const CardWrap = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #0000;
+  overflow: hidden;
+`;
 
 export const Title = styled.h3`
   margin: 0;
