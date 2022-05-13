@@ -297,7 +297,7 @@ export const CardContainer = styled.div`
   `
   export const CardWrap = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -395,7 +395,7 @@ export const ButtonContainer = styled.div`
 `
 
 export const Button = styled.button`
-  width: 100%;
+  width: 240px;
   height: 36px;
   padding: 0;
   border-radius: 20px;

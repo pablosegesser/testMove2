@@ -1,7 +1,6 @@
 import * as React from "react";
-import {Button, ButtonContainer, CardWrap} from '../../styles/globalStyle'
+import {Button, ButtonContainer} from '../../styles/globalStyle'
 import Header from '../../components/Header/header'
-import {Card} from '../../components/Card/card'
 
 interface HomeProps {}
 
@@ -14,11 +13,6 @@ const Home: React.FunctionComponent<HomeProps> = () => {
           JOIN
         </Button>
         </ButtonContainer> 
-        <CardWrap>
-        <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'}  description={ 'fashion worldest event'}/>
-        <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'}  description={ 'fashion worldest event'}/>
-        <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'}  description={ 'fashion worldest event'}/>
-        </CardWrap>
         </>
     )
   

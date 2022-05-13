@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 export const CardWrapper = styled.div`
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: 260px;
   grid-template-rows: 360px 80px 40px;
   grid-template-areas: "image" "text" "stats";
-  border-radius: 18px;
   background: white;
-  text-align: center;
+  text-align: left;
 `;
 
 export const CardImage = styled.div<{ background: string }>`
@@ -19,17 +18,20 @@ export const CardImage = styled.div<{ background: string }>`
 
 export const CardTextWrapper = styled.div`
   grid-area: text;
-  margin: 25px;
+  margin-top: 20px;
 `;
 
 export const CardTextDate = styled.span`
   color: #6667AB;
-  font-size: 13px;
+  font-size: 16px;
+  font-family: Arial;
+  font-weight: 700;
 `;
 
 export const CardTextTitle = styled.h2`
   margin-top: 0px;
   font-size: 2rem;
+  font-weight: 700;
   box-sizing: border-box;
   min-width: 0px;
   line-height: 1.2;
@@ -38,11 +40,14 @@ export const CardTextTitle = styled.h2`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-family: Arial;
+
 `;
 
 export const CardTextBody = styled.p`
   color: grey;
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: Times New Roman;
 `;
 
