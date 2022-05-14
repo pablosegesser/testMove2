@@ -1,7 +1,9 @@
 import * as React from "react";
-import {ButtonsContain, CardWrap, Title, TitleContainer} from '../../styles/globalStyle'
+import {ButtonsContain, CardWrap, ImageButton, Title, TitleContainer} from '../../styles/globalStyle'
 import Header from '../../components/Header/header'
 import {Card} from '../../components/Card/card'
+import ShopIcon from '../../ui-kit/icons/shop'
+import PlayIcon from '../../ui-kit/icons/play'
 
 interface MyStreamsProps {}
 
@@ -14,11 +16,21 @@ const MyStreams: React.FunctionComponent<MyStreamsProps> = () => {
         </CardWrap> 
         <ButtonsContain>
           <div>
-            SCHEDULE STREAM
+            <ImageButton>
+                <PlayIcon/>
+            </ImageButton>
+            <div>
+                SCHEDULE STREAM
+            </div>
           </div>
           <div>
-            BROWSE PRODUCTS
-          </div>
+            <ImageButton>
+              <ShopIcon/>
+            </ImageButton>
+            <div>
+                BROWSE PRODUCTS
+            </div>
+            </div>
         </ButtonsContain>
         <TitleContainer>
          <Title> UPCOMING </Title>

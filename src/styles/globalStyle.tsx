@@ -242,6 +242,7 @@ export const ImageContainer = styled.div`
   }
 `
 
+
 export const RowContainer = styled.div`
   width: 100%;
   min-height: 64px;
@@ -288,6 +289,8 @@ export const CardContainer = styled.div`
     margin-top: 5px;
   }
   `
+
+
   export const CardWrap = styled.div`
   width: 100vw;
   height: 80vh;
@@ -496,15 +499,20 @@ export const Button = styled.button`
 `
 
 export const ImageButton = styled.button`
-  width: 1rem;
   padding: 0;
+  width: 50px;
+  height: 50px;
+  left: 199px;
+  top: 354px;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 15px rgba(102, 103, 171, 0.2);
   border: none;
-  background: none;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
+  
   &:disabled {
     color: ${({ theme }) => theme.color.grey};
   }
