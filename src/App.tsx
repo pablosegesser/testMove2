@@ -1,4 +1,5 @@
 import { ThemeProvider } from "styled-components";
+import React from "react";
 import { AppRouter } from "./Routes";
 import { darkTheme } from "./styles/globalStyle";
 

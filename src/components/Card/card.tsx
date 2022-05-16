@@ -1,5 +1,6 @@
 import { Button, ButtonContainer } from "../../styles/globalStyle";
 import { CardTypes } from "../../Types/cardTypes";
+import React from "react";
 import {
   CardWrapper,
   CardImage,

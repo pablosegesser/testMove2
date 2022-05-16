@@ -178,23 +178,10 @@ export const PageContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-
-    div.button-container {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      margin-top: 15px;
-    }
-  }
-
-  &.list-page {
-    overflow: overlay;
-  }
-
+  
+  
   @media (max-width: ${({ theme }) => theme.device.tablet}) {
     position: fixed;
-    top: 290px;
     padding: 0 2rem;
     padding-bottom: 20rem;
     overflow: scroll;
@@ -341,30 +328,6 @@ export const Subtitle = styled.h6`
     @media (min-width: ${({ theme }) => theme.device.tablet}) {
       display: none;
     }
-  }
-`
-
-export const Paragraph = styled.p`
-  margin: 0;
-  font-family: 'Sofia-Pro';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 22px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.color.grey};
-  display: flex;
-  align-items: center;
-  &.desktop-font {
-    font-size: 14px;
-  }
-
-  @media (min-width: ${({ theme }) => theme.device.tablet}) {
-    margin: auto;
-  }
-
-  &.pagination {
-    color: ${({ theme }) => theme.color.black};
   }
 `
 

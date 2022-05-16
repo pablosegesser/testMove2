@@ -17,6 +17,16 @@ export const CardWrapper = styled.div`
     grid-template-areas:
     "image text text"
   }
+  &.bigger {
+    grid-template-columns: 1800px;
+    text-align: center;
+    padding-left:0;
+    background: black;
+    grid-template-rows: 800px;
+    grid-template-areas:
+    "image text"
+  }
+
 `;
 
 export const CardImage = styled.div<{ background: string }>`
