@@ -6,7 +6,7 @@ const initialState = {
     permission: null,
 };
 
-export const authReducer = (state = initialState, action: any) => {
+export const authReducer = (state = initialState, action) => {
     switch (action.type) {
         case types.authLoggedIn:
             return {
