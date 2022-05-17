@@ -44,6 +44,14 @@ export const CardTextWrapper = styled.div`
   &.centered {
   justify-self: center;
   align-self: center;
+  }
+ 
+  &.absolute {
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
 }
 `;
 
@@ -67,7 +75,10 @@ export const CardTextTitle = styled.h2`
   -webkit-background-clip: text;
   color: transparent;
   font-family: Arial;
-
+  
+  &.white {
+    color:white !important;
+   }
 `;
 
 export const CardTextBody = styled.p`
@@ -75,5 +86,10 @@ export const CardTextBody = styled.p`
   font-size: 20px;
   font-weight: 400;
   font-family: Times New Roman;
-`;
+  
+  &.light {
+    color:white !important;
+   }
+  `
+;
 

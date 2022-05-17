@@ -19,4 +19,10 @@ export const HeaderLayout = styled.div`
   line-height:13.8px;
   justify-content: center;
 
+
+  &.withIcon{
+    justify-content: space-between;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
 `

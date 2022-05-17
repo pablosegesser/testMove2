@@ -149,6 +149,13 @@ export const DesktopWrapper = styled.div`
   }
 `
 
+export const Icons = styled.div`
+  width: 100px;
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+`
+
 export const MainSection = styled.main`
   width: 100%;
   height: 100vh;
@@ -341,6 +348,9 @@ export const ButtonContainer = styled.div`
     margin-top: 23px;
   }
 
+  &.centerContain {
+    align-items: center;
+  }
   &.desktop {
     @media (min-width: ${({ theme }) => theme.device.tablet}) {
       display: flex;
