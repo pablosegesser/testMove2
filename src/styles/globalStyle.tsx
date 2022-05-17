@@ -137,6 +137,14 @@ export const BodyContainer = styled.div`
     padding: 0;
   }
 `
+export const Alignment = styled.div`
+ display: flex;
+ width:300px;
+ justify-content: space-between;
+ align-items: center;
+`
+
+
 
 export const DesktopWrapper = styled.div`
   width: 100%;

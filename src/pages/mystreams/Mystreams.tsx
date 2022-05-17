@@ -1,5 +1,5 @@
 import * as React from "react";
-import {ButtonsContain, CardWrap, ImageButton, Title, TitleContainer} from '../../styles/globalStyle'
+import {Alignment, ButtonsContain, CardWrap, ImageButton, Title, TitleContainer} from '../../styles/globalStyle'
 import Header from '../../components/Header/header'
 import {Card} from '../../components/Card/card'
 import ShopIcon from '../../ui-kit/icons/shop'
@@ -15,22 +15,22 @@ const MyStreams: React.FunctionComponent<MyStreamsProps> = () => {
         <Card  title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"horizontal centered"} withAction={true} buttonText={"START"}/>
         </CardWrap> 
         <ButtonsContain>
-          <div>
+          <Alignment>
             <ImageButton>
                 <PlayIcon/>
             </ImageButton>
             <div>
                 SCHEDULE STREAM
             </div>
-          </div>
-          <div>
+          </Alignment>
+          <Alignment>
             <ImageButton>
               <ShopIcon stroke={"#6667AB"}/>
             </ImageButton>
             <div>
                 BROWSE PRODUCTS
             </div>
-            </div>
+            </Alignment>
         </ButtonsContain>
         <TitleContainer>
          <Title> UPCOMING </Title>
