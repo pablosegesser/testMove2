@@ -15,7 +15,7 @@ export const Card = ({ title, name, description, imgUrl , className, withAction,
       <CardWrapper className={className}>
         <CardImage background={imgUrl} />
         <CardTextWrapper className={className}>
-          <CardTextDate>{name}</CardTextDate>
+          <CardTextDate className={className}>{name}</CardTextDate>
           <CardTextTitle className={className}>{title}</CardTextTitle>
           <CardTextBody className={className}>
             {description}

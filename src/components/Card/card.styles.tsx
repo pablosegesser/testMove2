@@ -16,6 +16,7 @@ export const CardWrapper = styled.div`
     grid-template-rows: 500px 0;
     grid-template-areas:
     "image text text"
+   
   }
   &.bigger {
     grid-template-columns: 1800px;
@@ -26,6 +27,26 @@ export const CardWrapper = styled.div`
     grid-template-areas:
     "image text"
   }
+  &.mobile {
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      grid-template-columns: 390px;
+      padding-left:0;
+      background: black;
+      grid-template-rows: 800px;
+      grid-template-areas:
+      "image text"
+    }
+    }
+    &.tiny {
+      @media (max-width: ${({ theme }) => theme.device.mobile}) {
+  
+      grid-template-columns: 170px 200px;
+      text-align: center;
+      grid-template-rows: 280px 0;
+      text-align: left;
+      grid-template-areas: "image text";
+      
+    }
 
 `;
 
@@ -53,6 +74,11 @@ export const CardTextWrapper = styled.div`
     justify-content: center;
     position: absolute;
 }
+&.small {
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    font-size: 16px;
+  }
+}
 `;
 
 export const CardTextDate = styled.span`
@@ -60,6 +86,12 @@ export const CardTextDate = styled.span`
   font-size: 16px;
   font-family: Arial;
   font-weight: 700;
+
+  &.small {
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      font-size: 12px;
+    }
+  }
 `;
 
 export const CardTextTitle = styled.h2`
@@ -79,6 +111,17 @@ export const CardTextTitle = styled.h2`
   &.white {
     color:white !important;
    }
+   
+   &.small {
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      font-size: 16px;
+    }
+  }
+    &.mobile {
+      @media (max-width: ${({ theme }) => theme.device.mobile}) {
+        font-size: 20px;
+      }
+  }
 `;
 
 export const CardTextBody = styled.p`
@@ -90,6 +133,18 @@ export const CardTextBody = styled.p`
   &.light {
     color:white !important;
    }
+
+   &.small {
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      font-size: 16px;
+    }
+  }
+  &.mobile {
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      font-size: 20px;
+      width:340px;
+    }
+}
   `
 ;
 

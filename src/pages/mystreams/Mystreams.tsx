@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Alignment, ButtonsContain, CardWrap, ImageButton, Title, TitleContainer} from '../../styles/globalStyle'
+import {Alignment, ButtonsContain, CardWrap, ImageButton, TextLine, Title, TitleContainer} from '../../styles/globalStyle'
 import Header from '../../components/Header/header'
 import {Card} from '../../components/Card/card'
 import ShopIcon from '../../ui-kit/icons/shop'
@@ -12,28 +12,28 @@ const MyStreams: React.FunctionComponent<MyStreamsProps> = () => {
         <>    
         <Header text={"MY STREAMS"}/> 
         <CardWrap>
-        <Card  title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"horizontal centered"} withAction={true} buttonText={"START"}/>
+        <Card  title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"horizontal centered tiny small"} withAction={true} buttonText={"START"}/>
         </CardWrap> 
         <ButtonsContain>
           <Alignment>
             <ImageButton>
                 <PlayIcon/>
             </ImageButton>
-            <div>
+            <TextLine>
                 SCHEDULE STREAM
-            </div>
+            </TextLine>
           </Alignment>
           <Alignment>
             <ImageButton>
               <ShopIcon stroke={"#6667AB"}/>
             </ImageButton>
-            <div>
+            <TextLine>
                 BROWSE PRODUCTS
-            </div>
+            </TextLine>
             </Alignment>
         </ButtonsContain>
         <TitleContainer>
-         <Title> UPCOMING </Title>
+         <Title className="mobile"> UPCOMING </Title>
          </TitleContainer>
         <CardWrap>
         <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={""} withAction={false} buttonText={""}/>
@@ -42,7 +42,7 @@ const MyStreams: React.FunctionComponent<MyStreamsProps> = () => {
         <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={""} withAction={false} buttonText={""}/>
         </CardWrap>  
         <TitleContainer>
-        <Title>PREVIOUSLY RECORDED</Title>
+        <Title className="mobile">PREVIOUSLY RECORDED</Title>
         </TitleContainer>
       <CardWrap>
         <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={""} withAction={false} buttonText={""}/>

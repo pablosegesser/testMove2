@@ -13,6 +13,8 @@ interface HeaderProps {
   className?: string;
 }
 
+const icons = false;
+
 const Header = ({ text, logo, icon, icon2, icon3, className }: HeaderProps) => {
 
   return (
@@ -24,11 +26,11 @@ const Header = ({ text, logo, icon, icon2, icon3, className }: HeaderProps) => {
      <div>
           {text}
      </div>
-    <Icons>
+   {icons ? <Icons>
           {icon}  
          {icon2}
          {icon3}
-    </Icons>
+    </Icons> : null} 
         </HeaderLayout>
     </>
   )

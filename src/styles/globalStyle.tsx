@@ -142,10 +142,15 @@ export const Alignment = styled.div`
  width:300px;
  justify-content: space-between;
  align-items: center;
+
 `
 
-
-
+export const TextLine = styled.div`
+@media (max-width: ${({ theme }) => theme.device.tablet}) {
+  font-size:14px;
+  width: 100px;
+}
+`
 export const DesktopWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -162,6 +167,7 @@ export const Icons = styled.div`
   display: flex;
   align-items:center;
   justify-content: space-around;
+
 `
 
 export const MainSection = styled.main`
@@ -315,7 +321,7 @@ export const Title = styled.h3`
   display: flex;
   align-items: center;
 
-  @media (min-width: ${({ theme }) => theme.device.tablet}) {
+  @media (max-width: ${({ theme }) => theme.device.tablet}) {
     margin: none !important;
   }
 
@@ -323,6 +329,13 @@ export const Title = styled.h3`
     font-size: 14px;
     align-self: flex-start;
   }
+  &.mobile {
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      margin-left: 0;
+      font-size: 20px;
+
+    }
+   }
 
   }
 `

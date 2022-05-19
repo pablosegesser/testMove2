@@ -18,7 +18,12 @@ export const HeaderLayout = styled.div`
   font-weight: 700;
   line-height:13.8px;
   justify-content: center;
+  align-items: end;
+  padding-bottom:12px;
 
+ @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    font-size:12px;    
+  }
 
   &.withIcon{
     justify-content: space-between;
