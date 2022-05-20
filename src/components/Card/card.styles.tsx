@@ -104,7 +104,7 @@ export const CardTextWrapper = styled.div`
   &.top {
     @media (max-width: ${({ theme }) => theme.device.mobile}) {
       font-size: 16px;
-      margin-top: 40px;
+      margin-top: 15px;
 
     }
 }

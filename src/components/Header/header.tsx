@@ -28,7 +28,7 @@ const Header = ({ text, logo, icon, icon2, icon3, className }: HeaderProps) => {
           {text}
      </div>
    {icons ? <Icons>
-          {icon}  
+         {icon}  
          {icon2}
          {icon3}
     </Icons> : null} 

@@ -301,8 +301,6 @@ export const CardContainer = styled.div`
   }
   `
 
-
-
   export const CardWrap = styled.div`
   width: 100vw;
   display: flex;
@@ -312,11 +310,6 @@ export const CardContainer = styled.div`
   justify-content: space-evenly;
   background: #0000;
 
-    @media (max-width: ${({ theme }) => theme.device.mobile}) {
-     flex-direction:column;
-    
-   }
-
 `;
 
 export const Title = styled.h3`
@@ -324,7 +317,8 @@ export const Title = styled.h3`
   font-family: 'Arial';
   font-style: normal;
   font-weight: 700;
-  margin-left: 82px;
+  margin-left: 20px;
+  margin-bottom: 20px;
   font-size: 2rem;
   line-height: 20.7px;
   letter-spacing: -0.015em;
