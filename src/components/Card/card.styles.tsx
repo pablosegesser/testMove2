@@ -7,6 +7,7 @@ export const CardWrapper = styled.div`
   grid-template-areas: "image" "text" ;
   background: white;
   padding-left:15px;
+  padding-bottom:40px;
   text-align: left;
  
   &.horizontal {
@@ -26,6 +27,10 @@ export const CardWrapper = styled.div`
     grid-template-rows: 800px;
     grid-template-areas:
     "image text"
+  }
+  &.black{
+    background: black !important;
+
   }
   &.mobile {
     @media (max-width: ${({ theme }) => theme.device.mobile}) {
@@ -51,10 +56,10 @@ export const CardWrapper = styled.div`
   &.break{
     @media (max-width: ${({ theme }) => theme.device.mobile}) {
     height: 203px;
-    width: 200px;
     margin-bottom: 20vh;
     padding-left: 0;
-    grid-template-rows: 250px 100px;
+    grid-template-rows: 200px 80px;
+    grid-template-columns: none;
     
   }
 
@@ -68,8 +73,8 @@ export const CardImage = styled.div<{ background: string }>`
  
   &.break{
   @media (max-width: ${({ theme }) => theme.device.mobile}) {
-    width: 220px;
-    height: 280px;
+    width: 140px;
+    height: 210px;
   }
 }
 `;
@@ -103,6 +108,13 @@ export const CardTextWrapper = styled.div`
 
     }
 }
+&.bottom {
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    padding-bottom: 90px;
+    align-self: end;
+  }
+}
+
 `;
 
 export const CardTextDate = styled.span`
@@ -113,14 +125,20 @@ export const CardTextDate = styled.span`
 
   &.small {
     @media (max-width: ${({ theme }) => theme.device.mobile}) {
-      font-size: 12px;
+      font-size: 10px;
     }
   }
-  &.break {
+  &.breakpoint {
     @media (max-width: ${({ theme }) => theme.device.mobile}) {
       font-size: 20px;
     }
 }
+&.medium {
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    font-size: 12px;
+  }
+}
+
 `;
 
 export const CardTextTitle = styled.h2`
@@ -151,11 +169,12 @@ export const CardTextTitle = styled.h2`
         font-size: 20px;
       }
   }
-  &.break {
+  &.medium {
     @media (max-width: ${({ theme }) => theme.device.mobile}) {
       font-size: 16px;
     }
-}
+  }
+
 `;
 
 export const CardTextBody = styled.p`
@@ -179,7 +198,7 @@ export const CardTextBody = styled.p`
       width:340px;
     }
 }
-&.break {
+&.medium {
   @media (max-width: ${({ theme }) => theme.device.mobile}) {
     font-size: 16px;
   }

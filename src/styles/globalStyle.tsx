@@ -82,8 +82,8 @@ export const lightTheme = {
 
 export const darkTheme = {
     bgColor: {
-      main: '#000000',
-      header: '#000000',
+      main: '#000',
+      header: '#000',
       button: '#6667AB',
     },
     fontColor: {
@@ -145,6 +145,25 @@ export const Alignment = styled.div`
 
 `
 
+export const Avatar = styled.div`
+width:38px;
+height:38px;
+margin-top:49px;
+margin-left:335px;
+border-radius:20px;
+background-color: red;
+background-size: cover;
+
+@media (max-width: ${({ theme }) => theme.device.mobile}) {
+  width:32px;
+  height:32px;
+  margin-top:49px;
+  margin-left:335px;
+  border-radius:20px;
+}
+`
+
+
 export const TextLine = styled.div`
 @media (max-width: ${({ theme }) => theme.device.mobile}) {
   font-size:14px;
@@ -163,7 +182,6 @@ export const DesktopWrapper = styled.div`
 `
 
 export const Icons = styled.div`
-  width: 100px;
   display: flex;
   align-items:center;
   justify-content: space-around;
@@ -172,25 +190,8 @@ export const Icons = styled.div`
 
 export const MainSection = styled.main`
   width: 100%;
-  height: 100vh;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  &.bgBlack {
-    background-color: ${({ theme }) => theme.color.black};
-  }
-  &.mobile {
-    @media (min-width: ${({ theme }) => theme.device.tablet}) {
-      display: none;
-    }
-  }
-  &.desktop {
-    @media (max-width: ${({ theme }) => theme.device.tablet}) {
-      display: none;
-    }
-  }
+  height: 100%;
+  background-color: ${({ theme }) => theme.color.black};
 `
 
 export const PageContent = styled.div`
@@ -213,7 +214,7 @@ export const PageContent = styled.div`
 export const TitleContainer = styled.div`
   width: 100%;
   display: flex;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   padding-top:60px;
 
 
@@ -301,6 +302,7 @@ export const CardContainer = styled.div`
   `
 
 
+
   export const CardWrap = styled.div`
   width: 100vw;
   display: flex;
@@ -333,6 +335,10 @@ export const Title = styled.h3`
     margin: none !important;
   }
 
+  &.dark {
+   color: white;
+  }
+
   &.item-font {
     font-size: 14px;
     align-self: flex-start;
@@ -340,7 +346,7 @@ export const Title = styled.h3`
   &.mobile {
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
       margin-left: 0;
-      font-size: 20px;
+      font-size: 18px;
 
     }
    }

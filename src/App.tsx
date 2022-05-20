@@ -13,7 +13,7 @@ const App = () => {
     }, [dispatch]);
 
     return  <ThemeProvider theme={darkTheme}>
-    <AppRouter />  
+        <AppRouter />  
       </ThemeProvider>;
 };
 

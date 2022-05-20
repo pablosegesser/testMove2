@@ -23,11 +23,18 @@ export const HeaderLayout = styled.div`
 
  @media (max-width: ${({ theme }) => theme.device.mobile}) {
     font-size:12px;    
+
   }
 
   &.withIcon{
     justify-content: space-between;
-    padding-right: 25px;
-    padding-left: 25px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
+
+  svg {
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
 `
