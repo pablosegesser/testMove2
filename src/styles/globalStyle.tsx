@@ -146,7 +146,7 @@ export const Alignment = styled.div`
 `
 
 export const TextLine = styled.div`
-@media (max-width: ${({ theme }) => theme.device.tablet}) {
+@media (max-width: ${({ theme }) => theme.device.mobile}) {
   font-size:14px;
   width: 100px;
 }

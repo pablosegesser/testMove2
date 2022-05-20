@@ -6,7 +6,6 @@ export const CardWrapper = styled.div`
   grid-template-rows: 360px 80px;
   grid-template-areas: "image" "text" ;
   background: white;
-  padding-top:20px;
   padding-left:15px;
   text-align: left;
  
