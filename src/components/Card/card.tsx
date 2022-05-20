@@ -13,7 +13,7 @@ import {
 export const Card = ({ title, name, description, imgUrl , className, withAction, buttonText}: CardTypes) => {
   return (
       <CardWrapper className={className}>
-        <CardImage background={imgUrl} />
+        <CardImage className={className} background={imgUrl} />
         <CardTextWrapper className={className}>
           <CardTextDate className={className}>{name}</CardTextDate>
           <CardTextTitle className={className}>{title}</CardTextTitle>

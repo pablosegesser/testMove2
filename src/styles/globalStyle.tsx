@@ -214,9 +214,11 @@ export const TitleContainer = styled.div`
   width: 100%;
   display: flex;
   margin-top: 2.5rem;
+  padding-top:60px;
 
-  @media (max-width: ${({ theme }) => theme.device.tablet}) {
-    padding-left: 4px;
+
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    padding-left: 15px;
 
   }
 `
@@ -301,12 +303,18 @@ export const CardContainer = styled.div`
 
   export const CardWrap = styled.div`
   width: 100vw;
-  height: 80vh;
   display: flex;
+  margin-top:20px;
+  flex-wrap:wrap;
   align-items: center;
   justify-content: space-evenly;
   background: #0000;
-  overflow: hidden;
+
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+     flex-direction:column;
+    
+   }
+
 `;
 
 export const Title = styled.h3`
@@ -372,6 +380,12 @@ export const ButtonContainer = styled.div`
   &.centerContain {
     align-items: center;
   }
+
+  &.xs {
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      align-items:start;
+    }
+  }
   &.desktop {
     @media (min-width: ${({ theme }) => theme.device.tablet}) {
       display: flex;
@@ -414,20 +428,12 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.bgColor.opposite};
     color: ${({ theme }) => theme.fontColor.opposite};
     margin-bottom: 13px;
-
+  
     &:disabled {
       border: 2px solid ${({ theme }) => theme.color.grey};
       background-color: ${({ theme }) => theme.color.white};
       color: ${({ theme }) => theme.color.grey};
     }
-  }
-
-  &.small-mobile {
-    width: 74px;
-    height: 28px;
-    font-size: 10px;
-    line-height: 22px;
-    margin: 0;
   }
 
   &.small-desktop {
@@ -475,21 +481,14 @@ export const Button = styled.button`
     }
   }
 
-  @media (min-width: ${({ theme }) => theme.device.mobile}) {
-    &.login {
-      max-width: 328px;
-    }
-
-    &.medium {
-      width: 195px;
-      align-self: center;
-      margin: 38px 0;
-    }
-
-    &.desktop {
-      height: 55px;
-    }
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    width: 108px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 16.1px;
+    margin-bottom: 0;
   }
+  
 `
 
 export const ImageButton = styled.button`

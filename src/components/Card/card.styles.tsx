@@ -6,6 +6,7 @@ export const CardWrapper = styled.div`
   grid-template-rows: 360px 80px;
   grid-template-areas: "image" "text" ;
   background: white;
+  padding-top:20px;
   padding-left:15px;
   text-align: left;
  
@@ -47,6 +48,16 @@ export const CardWrapper = styled.div`
       grid-template-areas: "image text";
       
     }
+  }
+  &.break{
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    height: 203px;
+    width: 200px;
+    margin-bottom: 20vh;
+    padding-left: 0;
+    grid-template-rows: 250px 100px;
+    
+  }
 
 `;
 
@@ -55,6 +66,13 @@ export const CardImage = styled.div<{ background: string }>`
   background-image: url(${({ background }) => background});
   border-radius: 2px;
   background-size: cover;
+ 
+  &.break{
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    width: 220px;
+    height: 280px;
+  }
+}
 `;
 
 export const CardTextWrapper = styled.div`
@@ -79,6 +97,13 @@ export const CardTextWrapper = styled.div`
     font-size: 16px;
   }
 }
+  &.top {
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      font-size: 16px;
+      margin-top: 40px;
+
+    }
+}
 `;
 
 export const CardTextDate = styled.span`
@@ -92,6 +117,11 @@ export const CardTextDate = styled.span`
       font-size: 12px;
     }
   }
+  &.break {
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      font-size: 20px;
+    }
+}
 `;
 
 export const CardTextTitle = styled.h2`
@@ -122,6 +152,11 @@ export const CardTextTitle = styled.h2`
         font-size: 20px;
       }
   }
+  &.break {
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      font-size: 16px;
+    }
+}
 `;
 
 export const CardTextBody = styled.p`
@@ -144,6 +179,11 @@ export const CardTextBody = styled.p`
       font-size: 20px;
       width:340px;
     }
+}
+&.break {
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    font-size: 16px;
+  }
 }
   `
 ;
