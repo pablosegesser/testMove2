@@ -7,6 +7,7 @@ import FavIcon from "../../ui-kit/icons/favourite";
 import AtomIcon from "../../ui-kit/icons/stream";
 import { CardWrap, MainSection, Title, TitleContainer } from "../../styles/globalStyle";
 import {Card} from '../../components/Card/card'
+import { Link } from "react-router-dom";
 
 
 interface HomeProps {}
@@ -14,7 +15,10 @@ interface HomeProps {}
 const Home: React.FunctionComponent<HomeProps> = () => {
     return (
         <MainSection>    
-        <Header className="withIcon" logo={<Logo/>} icon={<AtomIcon/>} icon2={<FavIcon/>} icon3={<ShopIcon stroke={"#FFF"}/>}/> 
+        <Header className="withIcon" logo={<Logo/>} icon={<AtomIcon/>} icon2={ <Link to="/mystreams">
+        <FavIcon/>
+           </Link>}
+            icon3={<ShopIcon stroke={"#FFF"}/>}/> 
          <Carrousel/>  
            <TitleContainer>
            <Title className="mobile dark">MY STREAMS</Title>
