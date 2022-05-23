@@ -1,4 +1,4 @@
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Scrollbar, A11y } from 'swiper';
 import {Card} from '../Card/card'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
