@@ -1,4 +1,4 @@
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Scrollbar, A11y } from 'swiper';
 import {Card} from '../Card/card'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,7 +19,7 @@ export default () => {
     >
      {Array.from(Array(6)).map(() => (
         <SwiperSlide>
-        <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"small break top white black"} withAction={false} buttonText={""}/>
+        <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"small break top white black"} withButton={false} buttonText={""}/>
        </SwiperSlide> ))} 
     </Swiper>
   );

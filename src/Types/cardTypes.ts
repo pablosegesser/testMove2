@@ -1,10 +1,11 @@
 export type CardTypes = {
     title: string;
-    name: string;
+    name?: string;
     description: string;
     imgUrl: string;
     className: string;
-    withAction: boolean;
+    withButton: boolean;
     buttonText: string;
+    withoutName?: boolean;
   };
   
