@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HeaderLayout = styled.div`
+export const HeaderLayout = styled.div<{ background: string }>`
   width: 100%;
   height: 88px;
   z-index: 9999;
@@ -21,6 +21,18 @@ export const HeaderLayout = styled.div`
   align-items: end;
   padding-bottom:12px;
 
+  &.withImage{
+    background-image: url(${({ background }) => background});
+    border-radius: 2px;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    svg {
+      margin-bottom: 440px;
+      margin-top: 20px;
+    }
+  }
+  
  @media (max-width: ${({ theme }) => theme.device.mobile}) {
     font-size:12px;    
 

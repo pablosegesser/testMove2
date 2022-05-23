@@ -10,17 +10,17 @@ import {
   CardTextBody,
 } from "./card.styles";
 
-export const Card = ({ title, name, description, imgUrl , className, withAction, buttonText}: CardTypes) => {
+export const Card = ({ title, name, description, imgUrl , className, withButton , withoutName, buttonText}: CardTypes) => {
   return (
       <CardWrapper className={className}>
         <CardImage className={className} background={imgUrl} />
         <CardTextWrapper className={className}>
-          <CardTextDate className={className}>{name}</CardTextDate>
+        {withoutName ? null : <CardTextDate className={className}>{name}</CardTextDate> }
           <CardTextTitle className={className}>{title}</CardTextTitle>
           <CardTextBody className={className}>
             {description}
           </CardTextBody>
-          {withAction ? <ButtonContainer className="centerContain">
+          {withButton ? <ButtonContainer className={className}>
            <Button type="button" className="secondary" onClick={()=>{}}>
               {buttonText}
            </Button>

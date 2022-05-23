@@ -16,7 +16,7 @@ const MyStreams: React.FunctionComponent<MyStreamsProps> = () => {
         logo={ <Link to="/"><ArrowIcon/> </Link>}
         text={"MY STREAMS"}/> 
         <CardWrap>
-        <Card  title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"horizontal centered tiny medium"} withAction={true} buttonText={"START"}/>
+        <Card  title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"horizontal centered tiny medium"} withButton={true} buttonText={"START"}/>
         </CardWrap> 
         <ButtonsContain>
           <Alignment>
@@ -41,7 +41,7 @@ const MyStreams: React.FunctionComponent<MyStreamsProps> = () => {
          </TitleContainer>
          <CardWrap>
            {Array.from(Array(4)).map(() => (
-        <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"small break top"} withAction={false} buttonText={""}/>
+        <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"small break top"} withButton={false} buttonText={""}/>
          ))} 
          </CardWrap>
        
@@ -51,7 +51,7 @@ const MyStreams: React.FunctionComponent<MyStreamsProps> = () => {
       
         <CardWrap>
            {Array.from(Array(4)).map(() => (
-        <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"small break top"} withAction={false} buttonText={""}/>
+        <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"small break top"} withButton={false} buttonText={""}/>
          ))} 
          </CardWrap>
         </>

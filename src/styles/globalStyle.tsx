@@ -149,7 +149,6 @@ export const Avatar = styled.div`
 width:38px;
 height:38px;
 margin-top:49px;
-margin-left:335px;
 border-radius:20px;
 background-color: red;
 background-size: cover;
@@ -158,7 +157,6 @@ background-size: cover;
   width:32px;
   height:32px;
   margin-top:49px;
-  margin-left:335px;
   border-radius:20px;
 }
 `
@@ -168,6 +166,21 @@ export const TextLine = styled.div`
 @media (max-width: ${({ theme }) => theme.device.mobile}) {
   font-size:14px;
   width: 100px;
+}
+`
+export const TitleHeader = styled.div`
+font-size:34px;
+@media (max-width: ${({ theme }) => theme.device.mobile}) {
+  font-size:24px;
+}
+`
+export const SubtitleHeader= styled.div`
+font-size:22px;
+padding-bottom:50px;
+@media (max-width: ${({ theme }) => theme.device.mobile}) {
+  font-size:16px;
+  padding-bottom:26px;
+
 }
 `
 export const DesktopWrapper = styled.div`
@@ -243,6 +256,20 @@ export const ButtonsContain = styled.div`
   }
 `
 
+
+export const CenterText= styled.div`
+  width: 100%;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
+  line-height: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.device.tablet}) {
+
+  }
+`
 export const ImageContainer = styled.div`
   width: 324px;
   text-align: center;
@@ -399,6 +426,7 @@ export const Button = styled.button`
   width: 200px;
   height: 36px;
   padding: 0;
+  justify-self: center;
   border-radius: 20px;
   border: 2px solid ${({ theme }) => theme.bgColor.button};
   background-color: ${({ theme }) => theme.bgColor.button};

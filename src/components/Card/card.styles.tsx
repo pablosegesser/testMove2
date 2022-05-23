@@ -32,6 +32,10 @@ export const CardWrapper = styled.div`
     background: black !important;
 
   }
+  &.transparent{
+    background: transparent !important;
+
+  }
   &.mobile {
     @media (max-width: ${({ theme }) => theme.device.mobile}) {
       grid-template-columns: 390px;
@@ -62,7 +66,7 @@ export const CardWrapper = styled.div`
     grid-template-columns: none;
     
   }
-
+}
 `;
 
 export const CardImage = styled.div<{ background: string }>`
@@ -114,6 +118,10 @@ export const CardTextWrapper = styled.div`
     align-self: end;
   }
 }
+
+
+
+
 
 `;
 
@@ -203,6 +211,7 @@ export const CardTextBody = styled.p`
     font-size: 16px;
   }
 }
+
   `
 ;
 
