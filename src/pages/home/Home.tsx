@@ -15,7 +15,7 @@ interface HomeProps {}
 const Home: React.FunctionComponent<HomeProps> = () => {
     return (
         <MainSection>    
-        <Header className="withIcon" logo={<Logo/>} icon={<AtomIcon/>} icon2={ <Link to="/mystreams">
+        <Header className="withIcon" logo={<Logo/>} icon={<Link to="/profile"><AtomIcon/></Link>} icon2={ <Link to="/mystreams">
         <FavIcon/>
            </Link>}
             icon3={<ShopIcon stroke={"#FFF"}/>}/> 
