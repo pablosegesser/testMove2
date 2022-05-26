@@ -7,11 +7,9 @@ import {
   CartTextTitle,
   CartTextBody,
 } from "./cart.styles";
-import AddIcon from "../IconButton/addIcon";
 
-const addIcon= true;
 
-export const Cart = ({ title,description, price, imgUrl , className }: CartTypes) => {
+export const Cart = ({ title,description, price, imgUrl , addIcon, className }: CartTypes) => {
   return (
     <> 
     <CartWrapper className={className}>
@@ -23,8 +21,7 @@ export const Cart = ({ title,description, price, imgUrl , className }: CartTypes
           </CartTextBody>
           <CartTextTitle className={className}>{price}</CartTextTitle>
           </CartTextWrapper>
-         {addIcon ? 
-    <AddIcon/>: null}
+         {addIcon}
       </CartWrapper>  
     </>
      

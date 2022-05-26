@@ -14,7 +14,7 @@ export const HeaderLayout = styled.div<{ background: string }>`
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 0.5s ease;
   font-family: Arial;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   line-height:13.8px;
   justify-content: center;

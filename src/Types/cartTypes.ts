@@ -4,5 +4,6 @@ export type CartTypes = {
     price: string;
     imgUrl: string;
     className: string;
+    addIcon?:any;
   };
   

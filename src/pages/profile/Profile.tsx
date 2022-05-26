@@ -5,13 +5,14 @@ import {Card} from '../../components/Card/card'
 import ArrowIcon from "../../ui-kit/icons/arrow";
 import { Link } from "react-router-dom";
 import { Cart } from "../../components/Cart/cart"
+import HeaderWithImage from "../../components/HeaderWithImage.tsx/headerWithImage";
 
 interface ProfileProps {}
 
 const Profile: React.FunctionComponent<ProfileProps> = () => {
     return (
         <>    
-        <Header className="withIcon withImage" title="ASHLEY BENSON" subtitle="124K FOLLOWERS"img="https://cdn.galleries.smcloud.net/t/galleries/gf-FsbC-uLmD-vqgG_ashley-benson-1920x1080-nocrop.jpg" buttonText={"EDIT PROFILE"}
+        <Header  headerWithImage={<HeaderWithImage title="ASHLEY BENSON" subtitle="124K FOLLOWERS" buttonText={"EDIT PROFILE"}/>} className="withIcon withImage" img="https://cdn.galleries.smcloud.net/t/galleries/gf-FsbC-uLmD-vqgG_ashley-benson-1920x1080-nocrop.jpg" 
         logo={ <Link to="/"><ArrowIcon/></Link>}/>
         <TitleContainer>
          <Title className="mobile"> ASHLEY'S STREAMS </Title>
