@@ -145,6 +145,24 @@ export const Alignment = styled.div`
 
 `
 
+export const IconContent = styled.div`
+border-right: 1px solid #E5E5E5;
+padding-left:10px;
+padding-right:10px;
+margin-top:10px;
+margin-bottom:10px;
+`
+export const FilterContent = styled.div`
+ display: flex;
+ height: 40px;
+ Width:100%;
+ border-bottom: 1px solid #c4c4c4;
+ justify-content: space-between;
+ padding:15px;
+
+`
+
+
 export const Avatar = styled.div`
 width:38px;
 height:38px;
@@ -160,12 +178,35 @@ background-size: cover;
   border-radius:20px;
 }
 `
+export const ContentIcon = styled.div`
+width: 24px;
+height: 24px;
+left: 331px;
+top: 247px;
+border-radius: 50%;
+background-color:#6667AB;
+cursor: pointer;
 
+`
+export const Wrap = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+`
 
 export const TextLine = styled.div`
 @media (max-width: ${({ theme }) => theme.device.mobile}) {
   font-size:14px;
   width: 100px;
+}
+`
+export const Text = styled.div`
+font-family: Arial;
+font-weight:700; 
+margin-left:10px;
+margin-right:10px;
+@media (max-width: ${({ theme }) => theme.device.mobile}) {
+  font-size:10px;
 }
 `
 export const TitleHeader = styled.div`
@@ -194,6 +235,24 @@ export const DesktopWrapper = styled.div`
   }
 `
 
+
+export const FilterContainer= styled.div`
+color:#999999;
+padding-left: 30px;
+padding-right: 30px;
+display: flex;
+align-items: center;
+
+
+@media (max-width: ${({ theme }) => theme.device.mobile}) {
+  padding-left: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+
+}
+
+
+`
 export const Icons = styled.div`
   display: flex;
   align-items:center;
@@ -230,11 +289,16 @@ export const TitleContainer = styled.div`
   margin-top: 1rem;
   padding-top:60px;
 
-
   @media (max-width: ${({ theme }) => theme.device.mobile}) {
     padding-left: 15px;
-
   }
+
+  &.smallView {
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    padding-top: 0 !important;
+   }
+  }
+
 `
 
 export const ButtonsContain = styled.div`
@@ -364,6 +428,15 @@ export const Title = styled.h3`
     font-size: 14px;
     align-self: flex-start;
   }
+
+  &.small {
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      font-size: 14px;
+      align-self: flex-start;
+      margin-left: 0 !important;
+    }
+
+  }
   &.mobile {
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
       margin-left: 0;
@@ -450,6 +523,25 @@ export const Button = styled.button`
     border: ${({ theme }) => theme.color.white};
     background-color: ${({ theme }) => theme.color.white};
     color: ${({ theme }) => theme.fontColor.opposite};
+  }
+
+  &.greyButton {
+   width: 90px;
+   height: 40px;
+   font-size: 16px;
+   margin-left:10px;
+   font-family: Arial;
+   border: none !important;
+   color:black;
+   left: 163px;
+   top: 169px;
+   background-color: #FAFAFA;
+   border-radius: 5px;
+   @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+   }
   }
 
   &.secondary {

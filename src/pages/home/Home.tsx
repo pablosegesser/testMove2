@@ -18,7 +18,7 @@ const Home: React.FunctionComponent<HomeProps> = () => {
         <Header className="withIcon" logo={<Logo/>} icon={<Link to="/profile"><AtomIcon/></Link>} icon2={ <Link to="/mystreams">
         <FavIcon/>
            </Link>}
-            icon3={<ShopIcon stroke={"#FFF"}/>}/> 
+            icon3={<Link to="/shop"><ShopIcon stroke={"#FFF"}/></Link>}/> 
          <Carrousel/>  
            <TitleContainer>
            <Title className="mobile dark">MY STREAMS</Title>

@@ -3,6 +3,7 @@ import React from "react";
 import Home from "../pages/home/Home";
 import MyStreams from "../pages/mystreams/Mystreams";
 import Profile from "../pages/profile/Profile";
+import Shop from "../pages/shop/Shop";
 
 export const AppRouter = (): JSX.Element => {
     return (
@@ -10,6 +11,7 @@ export const AppRouter = (): JSX.Element => {
             <Route path="/" element={<Home />} />
             <Route path="/mystreams" element={<MyStreams />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/shop" element={<Shop />} />
         </Routes>
     );
 };

@@ -13,6 +13,19 @@ export const CartWrapper = styled.div`
     padding-top: 15px;
     text-align: left;
 
+    &.withIcon{
+      grid-template-columns: 200px 900px 100px;
+      justify-content: center;
+      @media (max-width: ${({ theme }) => theme.device.mobile}) {
+        grid-template-columns: 120px 200px 100px;
+        grid-template-rows: 111px;
+        grid-template-areas: "image text";
+        grid-gap: 0px;
+        align-items:center;
+      
+    }
+    } 
+
 
   &.black{
     background: black !important;
