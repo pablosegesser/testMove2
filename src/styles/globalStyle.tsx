@@ -158,10 +158,9 @@ export const FilterContent = styled.div`
  Width:100%;
  border-bottom: 1px solid #c4c4c4;
  justify-content: space-between;
- padding:15px;
+ padding: 10px 15px 15px 15px;
 
 `
-
 
 export const Avatar = styled.div`
 width:38px;
@@ -179,14 +178,26 @@ background-size: cover;
 }
 `
 export const ContentIcon = styled.div`
-width: 24px;
-height: 24px;
+width: 28px;
+height: 28px;
 left: 331px;
 top: 247px;
 border-radius: 50%;
 background-color:#6667AB;
-cursor: pointer;
+align-items: center;
+justify-content: center;
+display: flex;
 
+&.checked {
+  background-color:#EEEEFF;
+
+}
+@media (max-width: ${({ theme }) => theme.device.mobile}) {
+  width: 24px;
+  height: 24px;
+  left: 331px;
+  top: 247px;
+}
 `
 export const Wrap = styled.div`
 display: flex;
@@ -292,9 +303,10 @@ export const TitleContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.device.mobile}) {
     padding-left: 15px;
   }
-
   &.smallView {
+    margin-top: 0;
   @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    margin-top: 1rem;
     padding-top: 0 !important;
    }
   }
