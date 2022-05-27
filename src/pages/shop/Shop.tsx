@@ -28,8 +28,8 @@ const Shop: React.FunctionComponent<ShopProps> = () => {
             <FilterContainer>
                    <Text>FILTER BY:</Text><TypeFilter/>
            </FilterContainer></> : null}
-         {Array.from(Array(4)).map(() => (
-        <Cart title={"REVOLVE"} price={'30.00'} imgUrl={'https://www.pruneshop.cl/media/catalog/product/cache/48a04200998cde1bd0724f004dc7dd57/P/I/PI02932CHAA1000_0_2.jpg'} description={'fashion worldest event'} className={"withIcon"} addIcon={<AddIcon/>} />
+         {Array.from(Array(4)).map((v, i) => (
+        <Cart key={i} title={"REVOLVE"} price={'30.00'} imgUrl={'https://www.pruneshop.cl/media/catalog/product/cache/48a04200998cde1bd0724f004dc7dd57/P/I/PI02932CHAA1000_0_2.jpg'} description={'fashion worldest event'} className={"withIcon"} addIcon={<AddIcon/>} />
          ))} 
         </>
     )

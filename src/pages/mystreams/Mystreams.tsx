@@ -40,8 +40,8 @@ const MyStreams: React.FunctionComponent<MyStreamsProps> = () => {
          <Title className="mobile"> UPCOMING </Title>
          </TitleContainer>
          <CardWrap>
-           {Array.from(Array(4)).map(() => (
-        <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"small break top"} withButton={false} buttonText={""}/>
+           {Array.from(Array(4)).map((v, i) => (
+        <Card key={i} title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"small break top"} withButton={false} buttonText={""}/>
          ))} 
          </CardWrap>
        
@@ -50,8 +50,8 @@ const MyStreams: React.FunctionComponent<MyStreamsProps> = () => {
         </TitleContainer>
       
         <CardWrap>
-           {Array.from(Array(4)).map(() => (
-        <Card title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"small break top"} withButton={false} buttonText={""}/>
+           {Array.from(Array(4)).map((v, i) => (
+        <Card key={i} title={"hello world"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'fashion worldest event'} className={"small break top"} withButton={false} buttonText={""}/>
          ))} 
          </CardWrap>
         </>
