@@ -297,11 +297,17 @@ export const PageContent = styled.div`
 export const TitleContainer = styled.div`
   width: 100%;
   display: flex;
+  justify-content: space-between;
   margin-top: 1rem;
   padding-top:60px;
 
+  .button {
+    color: white;
+  }
+
   @media (max-width: ${({ theme }) => theme.device.mobile}) {
     padding-left: 15px;
+    padding-right: 15px;
   }
   &.smallView {
     margin-top: 0;
@@ -405,14 +411,12 @@ export const CardContainer = styled.div`
   `
 
   export const CardWrap = styled.div`
-  width: 100vw;
   display: flex;
   margin-top:20px;
   flex-wrap:wrap;
   align-items: center;
   justify-content: space-evenly;
   background: #0000;
-
 `;
 
 export const Title = styled.h3`
