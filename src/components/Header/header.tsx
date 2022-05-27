@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { HeaderLayout} from './header.styles'
 import React from "react";
-import {Icons, Avatar, CenterText, Button, TitleHeader, SubtitleHeader} from '../../styles/globalStyle'
+import {Icons, Avatar} from '../../styles/globalStyle'
 
 
 interface HeaderProps {
@@ -15,13 +15,13 @@ interface HeaderProps {
   img?: string;
   subtitle?: string;
   buttonText?: any;
+  headerWithImage?: any;
 }
 
 const icons = true;
 const user = false;
-const headerImage = false;
 
-const Header = ({ text, title, logo, icon, icon2, icon3, className, img, subtitle, buttonText}: HeaderProps) => {
+const Header = ({ text, logo, icon, icon2, icon3, className, img, headerWithImage}: HeaderProps) => {
 
   return (
     <>
@@ -32,15 +32,7 @@ const Header = ({ text, title, logo, icon, icon2, icon3, className, img, subtitl
         <div>
            {text} 
         </div>
-   { headerImage ? <CenterText>
-     <TitleHeader>
-          {title} 
-     </TitleHeader>
-         <SubtitleHeader>{subtitle}</SubtitleHeader> 
-       <Button>
-          {buttonText}
-       </Button>
-      </CenterText> : null}
+   {headerWithImage}
    {icons ? <Icons>
          {icon}  
          {icon2}

@@ -16,6 +16,7 @@ export const CartWrapper = styled.div`
     &.withIcon{
       grid-template-columns: 200px 900px 100px;
       justify-content: center;
+
       @media (max-width: ${({ theme }) => theme.device.mobile}) {
         grid-template-columns: 120px 200px 100px;
         grid-template-rows: 111px;

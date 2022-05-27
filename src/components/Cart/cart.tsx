@@ -7,12 +7,9 @@ import {
   CartTextTitle,
   CartTextBody,
 } from "./cart.styles";
-import { ContentIcon } from "../../styles/globalStyle";
-import PlusIcon from "../../ui-kit/icons/plus";
 
-const addIcon= false;
 
-export const Cart = ({ title,description, price, imgUrl , className }: CartTypes) => {
+export const Cart = ({ title,description, price, imgUrl , addIcon, className }: CartTypes) => {
   return (
     <> 
     <CartWrapper className={className}>
@@ -24,7 +21,7 @@ export const Cart = ({ title,description, price, imgUrl , className }: CartTypes
           </CartTextBody>
           <CartTextTitle className={className}>{price}</CartTextTitle>
           </CartTextWrapper>
-         {addIcon ? <ContentIcon><PlusIcon/></ContentIcon> : null}
+         {addIcon}
       </CartWrapper>  
     </>
      
