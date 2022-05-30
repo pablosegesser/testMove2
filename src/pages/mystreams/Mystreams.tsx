@@ -21,7 +21,7 @@ const MyStreams: React.FunctionComponent<MyStreamsProps> = () => {
         <ButtonsContain>
           <Alignment>
             <ImageButton>
-                <PlayIcon/>
+            <Link to="/scheduleStream"><PlayIcon/></Link>
             </ImageButton>
             <TextLine>
                 SCHEDULE STREAM
@@ -29,7 +29,7 @@ const MyStreams: React.FunctionComponent<MyStreamsProps> = () => {
           </Alignment>
           <Alignment>
             <ImageButton>
-              <ShopIcon stroke={"#6667AB"}/>
+            <Link to="/shop"><ShopIcon stroke={"#6667AB"}/></Link>
             </ImageButton>
             <TextLine>
                 BROWSE PRODUCTS
