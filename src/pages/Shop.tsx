@@ -1,13 +1,13 @@
 import * as React from "react";
-import Header from '../../components/Header/header'
-import ArrowIcon from "../../ui-kit/icons/arrow";
+import Header from '../components/Header/header'
+import ArrowIcon from "../ui-kit/icons/arrow";
 import { Link } from "react-router-dom";
-import { Cart } from "../../components/Cart/cart"
-import Filter from '../../components/FilterBar/filter'
-import { TitleContainer, Title , FilterContainer, FilterContent, Text, Wrap} from "../../styles/globalStyle";
-import SearchIcon from "../../ui-kit/icons/search";
-import TypeFilter from "../../components/FilterBar/typeFilter";
-import AddIcon from "../../components/IconButton/addIcon";
+import { Cart } from "../components/Cart/cart"
+import Filter from '../components/FilterBar/filter'
+import { TitleContainer, Title , FilterContainer, FilterContent, Text, Wrap} from "../styles/globalStyle";
+import SearchIcon from "../ui-kit/icons/search";
+import TypeFilter from "../components/FilterBar/typeFilter";
+import AddIcon from "../components/IconButton/addIcon";
 
 interface ShopProps {}
 
