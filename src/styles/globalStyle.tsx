@@ -277,6 +277,11 @@ export const MainSection = styled.main`
   background-color: ${({ theme }) => theme.color.black};
 `
 
+export const Section = styled.main`
+  width: 100%;
+  height: 100vh;
+  background-color: ${({ theme }) => theme.color.black};
+`
 export const PageContent = styled.div`
   width: 100%;
   height: 100%;
@@ -530,6 +535,7 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.color.grey};
     color: ${({ theme }) => theme.color.white};
   }
+
 
   &.without-border {
     border: ${({ theme }) => theme.color.white};
