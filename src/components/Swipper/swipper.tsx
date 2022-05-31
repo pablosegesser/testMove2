@@ -1,3 +1,4 @@
+import React from 'react';
 import {Card} from '../Card/card'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 

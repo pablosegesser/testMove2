@@ -289,7 +289,7 @@ export const MainSection = styled.main`
 export const Section = styled.main`
   width: 100%;
   height: 100vh;
-  background-color: ${({ theme }) => theme.color.white};
+  background-color: ${({ theme }) => theme.color.black};
 `
 
 export const PageContent = styled.div`
