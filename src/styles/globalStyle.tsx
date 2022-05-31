@@ -226,6 +226,16 @@ font-size:34px;
   font-size:24px;
 }
 `
+
+export const UploadText = styled.div`
+font-size:24px;
+font-weight: 700;
+color: white;
+@media (max-width: ${({ theme }) => theme.device.mobile}) {
+  font-size:14px;
+
+}
+`
 export const SubtitleHeader= styled.div`
 font-size:22px;
 padding-bottom:50px;
@@ -276,12 +286,12 @@ export const MainSection = styled.main`
   height: 100%;
   background-color: ${({ theme }) => theme.color.black};
 `
-
 export const Section = styled.main`
   width: 100%;
   height: 100vh;
-  background-color: ${({ theme }) => theme.color.black};
+  background-color: ${({ theme }) => theme.color.white};
 `
+
 export const PageContent = styled.div`
   width: 100%;
   height: 100%;
