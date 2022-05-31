@@ -64,7 +64,25 @@ export const CardWrapper = styled.div`
     padding-left: 0;
     grid-template-rows: 200px 80px;
     grid-template-columns: none;
-    
+
+  }
+
+  &.edit{
+    grid-template-rows: 330px 60px;
+    margin-bottom:80px;
+    margin-top: 40px;
+    padding-bottom:0;
+      @media (max-width: ${({ theme }) => theme.device.mobile}) {
+        grid-template-columns: 140px; 
+        margin-top: 130px !important;
+        height: 203px;
+        margin-bottom: 20vh;
+        padding-left: 0;
+        grid-template-rows: 200px 80px;
+
+
+      }
+
   }
 }
 `;
@@ -146,6 +164,12 @@ export const CardTextDate = styled.span`
     font-size: 12px;
   }
 }
+&.font-m {
+  font-size: 14px;
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    font-size: 10px;
+  }
+}
 
 `;
 
@@ -182,6 +206,12 @@ export const CardTextTitle = styled.h2`
       font-size: 16px;
     }
   }
+  &.font-m {
+    font-size: 1.5rem;
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      font-size: 16px;
+    }
+  }
 
 `;
 
@@ -211,7 +241,12 @@ export const CardTextBody = styled.p`
     font-size: 16px;
   }
 }
-
+&.font-m {
+  font-size: 18px;
+  @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    font-size: 16px;
+  }
+}
   `
 ;
 

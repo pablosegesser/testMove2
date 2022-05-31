@@ -5,6 +5,8 @@ import Home from "../pages/home/Home";
 import MyStreams from "../pages/mystreams/Mystreams";
 import Profile from "../pages/profile/Profile";
 import ProtectedRoute from "./ProtectedRoute";
+import Shop from "../pages/Shop";
+import ScheduleStream from "../pages/schedule/ScheduleStream";
 
 export const AppRouter = (): JSX.Element => {
   return (
@@ -20,6 +22,8 @@ export const AppRouter = (): JSX.Element => {
           </ProtectedRoute>
         }
       />
+      <Route path="/shop" element={<Shop />} />
+      <Route path="/scheduleStream" element={<ScheduleStream />} />
     </Routes>
   );
 };
