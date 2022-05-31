@@ -55,8 +55,5 @@
     },
     "devDependencies": {
         "@types/js-cookie": "^3.0.2"
-    },
-    "engines": {
-        "node": ">=16.0.0"
     }
 }
