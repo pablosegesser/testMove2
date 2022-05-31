@@ -535,6 +535,12 @@ export const Button = styled.button`
     color: ${({ theme }) => theme.color.white};
   }
 
+  &.full-width {
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      width: -webkit-fill-available;
+    }
+  }
+
   &.without-border {
     border: ${({ theme }) => theme.color.white};
     background-color: ${({ theme }) => theme.color.white};
