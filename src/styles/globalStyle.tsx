@@ -226,6 +226,16 @@ font-size:34px;
   font-size:24px;
 }
 `
+
+export const UploadText = styled.div`
+font-size:24px;
+font-weight: 700;
+color: white;
+@media (max-width: ${({ theme }) => theme.device.mobile}) {
+  font-size:14px;
+
+}
+`
 export const SubtitleHeader= styled.div`
 font-size:22px;
 padding-bottom:50px;
@@ -274,6 +284,11 @@ export const Icons = styled.div`
 export const MainSection = styled.main`
   width: 100%;
   height: 100%;
+  background-color: ${({ theme }) => theme.color.black};
+`
+export const Section = styled.main`
+  width: 100%;
+  height: 100vh;
   background-color: ${({ theme }) => theme.color.black};
 `
 
@@ -410,6 +425,12 @@ export const CardContainer = styled.div`
   }
   `
 
+  export const Content = styled.div`
+  width: 100%;
+  padding-top: 1rem;
+ 
+  `
+
   export const CardWrap = styled.div`
   display: flex;
   margin-top:20px;
@@ -535,31 +556,6 @@ export const Button = styled.button`
     color: ${({ theme }) => theme.color.white};
   }
 
-  &.without-border {
-    border: ${({ theme }) => theme.color.white};
-    background-color: ${({ theme }) => theme.color.white};
-    color: ${({ theme }) => theme.fontColor.opposite};
-  }
-
-  &.greyButton {
-   width: 90px;
-   height: 40px;
-   font-size: 16px;
-   margin-left:10px;
-   font-family: Arial;
-   border: none !important;
-   color:black;
-   left: 163px;
-   top: 169px;
-   background-color: #FAFAFA;
-   border-radius: 5px;
-   @media (max-width: ${({ theme }) => theme.device.mobile}) {
-    width: 80px;
-    height: 30px;
-    font-size: 12px;
-   }
-  }
-
   &.secondary {
     background-color: ${({ theme }) => theme.bgColor.opposite};
     color: ${({ theme }) => theme.fontColor.opposite};
@@ -625,6 +621,35 @@ export const Button = styled.button`
     margin-bottom: 0;
   }
   
+  &.tiny {
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      width: 161px;
+      height: 36px;
+      font-size: 14px;
+      line-height: 16.1px;
+      margin-bottom: 0;
+
+    }
+    
+  }
+
+
+  &.border-off {
+    background-color: transparent;
+    border: none;
+    color: ${({ theme }) => theme.color.white};
+
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      width: 161px;
+      height: 36px;
+      font-size: 14px;
+      line-height: 16.1px;
+      margin-bottom: 0;
+
+    }
+    
+  }
+
 `
 
 export const ImageButton = styled.button`

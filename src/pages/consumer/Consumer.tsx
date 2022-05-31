@@ -53,10 +53,9 @@ const Consumer = ({ }: ConsumerProps) => {
 					{Array.from(Array(6)).map((v, i) => (
 						<AlternativeCard
 							key={i}
-							className={"background-image text--white text--small"} 
+							className={"background-image text--white text--small"}
 							name={'ASHLEY BENSON'}
-							imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'}
-						/>
+							imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} title={""} description={""} withButton={false} buttonText={""}						/>
 					))}
 				</CardWrap>
 				<TitleContainer>
