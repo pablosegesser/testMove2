@@ -28,6 +28,7 @@ export const HeaderLayout = styled.div<{background: string}>`
     background-size: cover;
     width: 100%;
     height: auto;
+    position: relative;
 
     svg {
       margin-bottom: 440px;

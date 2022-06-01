@@ -1,5 +1,5 @@
 import React from "react";
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 // pages
 import Consumer from "../pages/consumer/Consumer";
 import Home from "../pages/home/Home";
@@ -18,18 +18,26 @@ export const AppRouter = (): JSX.Element => {
       <Route path="/consumer" element={<Consumer />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/mystreams" element={<MyStreams />} />
+      <Route
+        path="/mystreams"
+        element={
+          <ProtectedRoute redirectPath="/" role="creator">
+            <MyStreams />
+          </ProtectedRoute>
+        }
+      ></Route>
       <Route
         path="/profile"
         element={
-          <ProtectedRoute redirectPath="/" role="consumer">
+          <ProtectedRoute redirectPath="/">
             <Profile />
           </ProtectedRoute>
         }
       />
       <Route path="/shop" element={<Shop />} />
       <Route path="/scheduleStream" element={<ScheduleStream />} />
-      <Route path="*" element={"Error 404"} />
+
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };

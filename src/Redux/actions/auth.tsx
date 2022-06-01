@@ -9,11 +9,11 @@ export const action_auth_startCheck = () => {
     const resp = {status: 200};
     const user = {
       user: {
-        user_id: "1",
-        username: "memo",
-        first_name: "Ernesto",
+        user_id: "3",
+        username: "robi98",
+        first_name: "Roberto",
         last_name: "Gutierrez",
-        role: "consumer",
+        role: ["consumer", "creator"],
         avatar:
           "https://gravatar.com/avatar/8523c53115cc551a96cd0afdcd09e734?s=400&d=robohash&r=x",
         email: "memo@gmail.com",
@@ -32,25 +32,27 @@ export const action_auth_startCheck = () => {
   };
 };
 
-export const action_auth_login = () => {
+export const action_auth_login = (data) => {
   return async (dispatch) => {
     dispatch(checkingStarted());
-
-    const resp = {status: 200};
-    const jsonResp = {
-      token: "sdfdfsdfsddhhrhfghfgjdjgjhg",
-      user: {
-        user_id: "1",
-        username: "memo",
-        first_name: "Ernesto",
-        last_name: "Gutierrez",
-        role: "consumer",
-        avatar:
-          "https://gravatar.com/avatar/8523c53115cc551a96cd0afdcd09e734?s=400&d=robohash&r=x",
-        email: "memo@gmail.com",
-      },
-    };
-
+    let resp = {status: 401};
+    let jsonResp = {user: {}, token: ""};
+    if (data.email === "consu@gmail.com" && data.password === "123456") {
+      resp = {status: 200};
+      jsonResp = {
+        token: "sdfdfsdfsddhhrhfghfgjdjgjhg",
+        user: {
+          user_id: "3",
+          username: "robi98",
+          first_name: "Roberto",
+          last_name: "Gutierrez",
+          role: ["consumer", "creator"],
+          avatar:
+            "https://gravatar.com/avatar/8523c53115cc551a96cd0afdcd09e734?s=400&d=robohash&r=x",
+          email: "memo@gmail.com",
+        },
+      };
+    }
     try {
       if (resp.status === 200) {
         const {user} = jsonResp;
