@@ -24,6 +24,7 @@ export const AppRouter = (): JSX.Element => {
       />
       <Route path="/shop" element={<Shop />} />
       <Route path="/scheduleStream" element={<ScheduleStream />} />
+      <Route path="*" element={"Error 404"} />
     </Routes>
   );
 };
