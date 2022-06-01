@@ -556,6 +556,37 @@ export const Button = styled.button`
     color: ${({ theme }) => theme.color.white};
   }
 
+  &.full-width {
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      width: -webkit-fill-available;
+    }
+  }
+
+  &.without-border {
+    border: ${({ theme }) => theme.color.white};
+    background-color: ${({ theme }) => theme.color.white};
+    color: ${({ theme }) => theme.fontColor.opposite};
+  }
+
+  &.greyButton {
+   width: 90px;
+   height: 40px;
+   font-size: 16px;
+   margin-left:10px;
+   font-family: Arial;
+   border: none !important;
+   color:black;
+   left: 163px;
+   top: 169px;
+   background-color: #FAFAFA;
+   border-radius: 5px;
+   @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+   }
+  }
+
   &.secondary {
     background-color: ${({ theme }) => theme.bgColor.opposite};
     color: ${({ theme }) => theme.fontColor.opposite};
