@@ -1,3 +1,5 @@
+import React from "react";
+
 import {IconContent} from '../../styles/globalStyle'
 
 interface IconProps {
