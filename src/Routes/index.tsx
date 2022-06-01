@@ -7,6 +7,7 @@ import Login from "../pages/login/Login";
 import MyStreams from "../pages/mystreams/Mystreams";
 import Profile from "../pages/profile/Profile";
 import ProtectedRoute from "./ProtectedRoute";
+import Register from "../pages/login/Register";
 import ScheduleStream from "../pages/schedule/ScheduleStream";
 import Shop from "../pages/Shop";
 
@@ -15,6 +16,7 @@ export const AppRouter = (): JSX.Element => {
 		<Routes>
 			<Route path="/" element={<Home />} />
 			<Route path="/login" element={<Login />} />
+			<Route path="/register" element={<Register />} />
 			<Route path="/consumer" element={<Consumer />} />
 			<Route path="/mystreams" element={<MyStreams />} />
 			<Route
