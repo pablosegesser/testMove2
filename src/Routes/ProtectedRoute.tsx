@@ -8,7 +8,7 @@ interface ProtectedRouteProps {
   redirectPath?: string;
   children?: JSX.Element;
 }
-
+// check if the user have the right roles
 const checkArray = (a, b) => {
   const diff = b.filter((e) => !a.includes(e));
   if (diff.length !== 0) {
@@ -31,6 +31,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   if (!user) {
     return <Navigate to={redirectPath} replace />;
   }
+  console.log(checkArray(user.role, roles));
   if (role && user) {
     if (!checkArray(user.role, roles)) {
       return <Navigate to={redirectPath} replace />;
