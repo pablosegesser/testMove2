@@ -4,22 +4,36 @@ import {Navigate, Outlet} from "react-router-dom";
 import {RootState} from "../Redux/store";
 
 interface ProtectedRouteProps {
-  role: string;
+  role?: string;
   redirectPath?: string;
   children?: JSX.Element;
 }
+// check if the user have the right roles
+const checkArray = (a, b) => {
+  const diff = b.filter((e) => !a.includes(e));
+  if (diff.length !== 0) {
+    return false;
+  }
+  return true;
+};
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
-  role,
+  role = "consumer",
   redirectPath = "/",
   children,
 }) => {
-  const user = useSelector((state: RootState) => state.auth.user);
+  const {user} = useSelector((state: RootState) => state.auth);
+  let roles = ["consumer"];
+  if (role !== "consumer") {
+    roles.push(role);
+  }
+
   if (!user) {
     return <Navigate to={redirectPath} replace />;
   }
+  console.log(checkArray(user.role, roles));
   if (role && user) {
-    if (user.role !== role) {
+    if (!checkArray(user.role, roles)) {
       return <Navigate to={redirectPath} replace />;
     }
   }

@@ -1,6 +1,12 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const HeaderLayout = styled.div<{ background: string }>`
+export const AvatarImg = styled.img`
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+`;
+
+export const HeaderLayout = styled.div<{background: string}>`
   width: 100%;
   height: 88px;
   z-index: 9999;
@@ -9,37 +15,38 @@ export const HeaderLayout = styled.div<{ background: string }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.bgColor.header};
-  color: ${({ theme }) => theme.fontColor.header};
+  background-color: ${({theme}) => theme.bgColor.header};
+  color: ${({theme}) => theme.fontColor.header};
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 0.5s ease;
   font-family: Arial;
   font-size: 16px;
   font-weight: 700;
-  line-height:13.8px;
+  line-height: 13.8px;
   justify-content: center;
   align-items: end;
-  padding-bottom:12px;
+  padding-bottom: 12px;
+  position: sticky;
 
-  &.withImage{
-    background-image: url(${({ background }) => background});
+  &.withImage {
+    background-image: url(${({background}) => background});
     border-radius: 2px;
     background-size: cover;
     width: 100%;
     height: auto;
-    
+    position: relative;
+
     svg {
       margin-bottom: 440px;
       margin-top: 20px;
     }
   }
-  
- @media (max-width: ${({ theme }) => theme.device.mobile}) {
-    font-size:12px;    
 
+  @media (max-width: ${({theme}) => theme.device.mobile}) {
+    font-size: 12px;
   }
 
-  &.withIcon{
+  &.withIcon {
     justify-content: space-between;
     padding-right: 15px;
     padding-left: 15px;
@@ -49,5 +56,4 @@ export const HeaderLayout = styled.div<{ background: string }>`
     cursor: pointer;
     margin-right: 10px;
   }
-
-`
+`;
