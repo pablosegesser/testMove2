@@ -9,6 +9,9 @@ import Profile from "../pages/profile/Profile";
 import ProtectedRoute from "./ProtectedRoute";
 import Register from "../pages/login/Register";
 import ScheduleStream from "../pages/schedule/ScheduleStream";
+import SelectDate from "../pages/schedule/SelectDate";
+import UpploadImage from "../pages/schedule/UpploadImage";
+import UserInfo from "../pages/schedule/UserInfo";
 import Shop from "../pages/Shop";
 import Header from "../components/Header/header";
 import Logo from "../ui-kit/logo/logo";
@@ -51,7 +54,7 @@ export const AppRouter = (): JSX.Element => {
         <Route
           path="/consumer"
           element={HeadAdd(
-            <ProtectedRoute redirectPath="/">
+            <ProtectedRoute redirectPath="/" role={""}>
               <Consumer />
             </ProtectedRoute>,
             true
@@ -70,7 +73,7 @@ export const AppRouter = (): JSX.Element => {
         <Route
           path="/profile"
           element={
-            <ProtectedRoute redirectPath="/">
+            <ProtectedRoute redirectPath="/" role={""}>
               <Profile />
             </ProtectedRoute>
           }
@@ -91,7 +94,11 @@ export const AppRouter = (): JSX.Element => {
             </ProtectedRoute>
           }
         />
-
+      <Route path="/shop" element={<Shop />} />
+      <Route path="/scheduleStream" element={<ScheduleStream />} />
+      <Route path="/selectDate" element={<SelectDate />} />
+      <Route path="/upploadImage" element={<UpploadImage />} />
+      <Route path="/userInfo" element={<UserInfo />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>

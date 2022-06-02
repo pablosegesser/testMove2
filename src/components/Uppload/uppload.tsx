@@ -15,11 +15,11 @@ export default function Uppload() {
     <div>
       <div {...getRootProps()}>
         <input {...getInputProps()} />
-        <UploadText>UPLOAD COVER FOTO</UploadText>
-      </div>
-      {paths.map((path) => 
+     { paths.length == 0 ? <UploadText>UPLOAD COVER FOTO</UploadText> : null}
+       {paths.map((path) => 
         <img key={path} src={path} />
       ) }
+      </div>
     </div>
   );
 }

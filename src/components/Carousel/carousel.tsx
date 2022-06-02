@@ -1,4 +1,4 @@
-import "antd/dist/antd.min.css";
+import 'antd/dist/antd.min.css'
 import React from "react";
 import {Carousel} from "antd";
 import {Card} from "../Card/card";
@@ -19,7 +19,7 @@ const Carrousel = () => (
           imgUrl={
             "https://superstarsbio.com/wp-content/uploads/2019/09/Ashley-Benson-cathy.jpg"
           }
-          className={"bigger absolute white light mobile centerContain bottom"}
+          className={"bigger absolute white light mobile centerContain bottom background-image "}
           withButton={true}
           buttonText={"JOIN"}
         />
@@ -68,7 +68,7 @@ const Carrousel = () => (
           withButton={true}
           buttonText={"JOIN"}
         />
-      </h3>{" "}
+      </h3>
     </div>
   </Carousel>
 );

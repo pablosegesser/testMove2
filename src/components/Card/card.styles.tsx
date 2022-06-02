@@ -19,6 +19,13 @@ export const CardWrapper = styled.div`
     "image text text"
    
   }
+  &.non-margin {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom:0px !important;
+    margin-bottom: 90px;
+   
+  }
   &.bigger {
     grid-template-columns: 1800px;
     text-align: center;
@@ -63,10 +70,16 @@ export const CardWrapper = styled.div`
     margin-bottom: 20vh;
     padding-left: 0;
     grid-template-rows: 200px 80px;
-    grid-template-columns: none;
+    margin-top: 60px;
+    grid-template-columns: 140px;
 
   }
+  &.non-image{
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+    grid-template-rows: 10px !important;
+    margin-bottom: 0 !important;
 
+  }
   &.edit{
     grid-template-rows: 330px 60px;
     margin-bottom:80px;
@@ -84,6 +97,24 @@ export const CardWrapper = styled.div`
       }
 
   }
+  &.photo{
+    grid-template-rows: 330px 60px;
+    margin-bottom:10px !important;
+    margin-top: 0px !important;
+    padding-bottom:0;
+    padding-left: 0 !important;
+    grid-template-areas: "text" !important;
+    grid-template-rows: 140px !important;
+      @media (max-width: ${({ theme }) => theme.device.mobile}) {
+        grid-template-columns: 140px; 
+        margin-top: 10px !important;
+        height: 203px;
+        margin-bottom: 20vh;
+        padding-left: 0;
+        grid-template-rows: 200px 80px;
+
+
+      }
 }
 `;
 

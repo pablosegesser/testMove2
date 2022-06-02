@@ -201,6 +201,10 @@ export const Wrap = styled.div`
   align-items: center;
 `;
 
+export const Container = styled.div`
+margin-top:200px;
+`
+
 export const TextLine = styled.div`
   @media (max-width: ${({theme}) => theme.device.mobile}) {
     font-size: 14px;
@@ -280,6 +284,15 @@ export const Section = styled.main`
   background-color: ${({theme}) => theme.color.black};
 `;
 
+export const BlackMain = styled.main`
+  width: 100%;
+  height: 100%;
+  background-color: ${({ theme }) => theme.color.black};  
+ @media (max-width: ${({ theme }) => theme.device.mobile}) {
+  height: 100vh;
+
+}
+`
 export const PageContent = styled.div`
   width: 100%;
   height: 100%;
@@ -317,7 +330,19 @@ export const TitleContainer = styled.div`
       padding-top: 0 !important;
     }
   }
-`;
+
+  &.sub {
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 0;
+  padding-top: 0;
+
+   }
+  }
+ 
+
+`
 
 export const ButtonsContain = styled.div`
   width: 100%;
@@ -409,7 +434,9 @@ export const CardContainer = styled.div`
 export const Content = styled.div`
   width: 100%;
   padding-top: 1rem;
-`;
+  padding-bottom: 20px;
+ 
+  `
 
 export const CardWrap = styled.div`
   display: flex;
@@ -418,6 +445,14 @@ export const CardWrap = styled.div`
   align-items: center;
   justify-content: space-evenly;
   background: #0000;
+  &.top {
+    display: grid;
+    margin-top:90px;
+  }
+  &.no-top {
+    display: grid;
+    margin-top:0px !important;
+  }
 `;
 
 export const Title = styled.h3`
@@ -438,7 +473,13 @@ export const Title = styled.h3`
   }
 
   &.dark {
-   color: white;
+    font-size:16px;
+    color: white;
+    margin-left: 0;
+    margin-bottom: 0;
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      font-size: 12px;
+    }
   }
 
   &.item-font {
