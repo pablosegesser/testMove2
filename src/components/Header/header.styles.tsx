@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const AvatarImg = styled.img`
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+`;
+
 export const HeaderLayout = styled.div<{background: string}>`
   width: 100%;
   height: 88px;

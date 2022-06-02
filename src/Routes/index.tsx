@@ -17,6 +17,7 @@ import FavIcon from "../ui-kit/icons/favourite";
 import atom from "../assets/images/atom2.svg";
 
 export const AppRouter = (): JSX.Element => {
+  // add header func
   const HeadAdd = (element: JSX.Element, header: boolean) => {
     if (header) {
       return (
@@ -29,11 +30,7 @@ export const AppRouter = (): JSX.Element => {
                 <AtomIcon />
               </Link>
             }
-            icon2={
-              <Link to="/profile">
-                <FavIcon />
-              </Link>
-            }
+            icon2={<FavIcon />}
             icon3={
               <Link to="/consumer">
                 <img src={atom} alt="" />{" "}
