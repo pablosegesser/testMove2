@@ -25,6 +25,7 @@ export const AppRouter = (): JSX.Element => {
           <Header
             className="withIcon"
             logo={<Logo />}
+            avatar={false}
             icon={
               <Link to="/mystreams">
                 <AtomIcon />

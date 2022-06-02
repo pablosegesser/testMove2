@@ -17,6 +17,7 @@ interface HeaderProps {
   subtitle?: string;
   buttonText?: any;
   headerWithImage?: any;
+  avatar?: boolean;
 }
 
 const icons = true;
@@ -30,6 +31,7 @@ const Header = ({
   className,
   img,
   headerWithImage,
+  avatar = true,
 }: HeaderProps) => {
   const user = useSelector((state: RootState) => state.auth.user);
   return (
@@ -48,7 +50,7 @@ const Header = ({
               {icon3}
             </>
           ) : null}
-          {user && !className?.includes("withImage") ? (
+          {user && !className?.includes("withImage") && avatar ? (
             <Link to="/profile">
               <AvatarImg src={user.avatar} alt="Avatar" />
             </Link>
