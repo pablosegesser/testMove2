@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { SlickWrapper } from "./slick.styles";
 
-export const SlickCarousel = () => {
+export const SlickSlider = () => {
 	const slider1 = useRef<any | null>(null);
 
 	const settings = {
@@ -45,7 +45,7 @@ export const SlickCarousel = () => {
 	);
 };
 
-export const SlickSlider = () => {
+export const SlickCarousel = () => {
 	const slider2 = useRef<any | null>(null);
 
 	return (
