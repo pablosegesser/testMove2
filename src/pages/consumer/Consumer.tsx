@@ -11,6 +11,7 @@ import { CardWrap, MainSection, Title, TitleContainer } from "../../styles/globa
 import FavIcon from "../../ui-kit/icons/favourite";
 import ShopIcon from "../../ui-kit/icons/shop";
 import Logo from "../../ui-kit/logo/logo";
+import { SlickCarousel, SlickSlider } from "../../components/Carousel/slickCarousel";
 
 interface ConsumerProps { }
 
@@ -32,7 +33,9 @@ const Consumer = ({ }: ConsumerProps) => {
 						</Link>
 					}
 				/>
-				<Carrousel />
+				{/* <Carrousel /> */}
+				<SlickCarousel />
+				<SlickSlider />
 				<TitleContainer>
 					<Title className="mobile dark">MY STREAMS</Title>
 				</TitleContainer>

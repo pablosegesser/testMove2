@@ -1,4 +1,4 @@
-import {Route, Routes} from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import React from "react";
 import Consumer from "../pages/consumer/Consumer";
 import Home from "../pages/home/Home";
@@ -24,6 +24,10 @@ export const AppRouter = (): JSX.Element => {
       />
       <Route path="/shop" element={<Shop />} />
       <Route path="/scheduleStream" element={<ScheduleStream />} />
+      <Route
+        path="*"
+        element={<Navigate to="/" replace />}
+      />
     </Routes>
   );
 };
