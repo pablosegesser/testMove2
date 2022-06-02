@@ -19,6 +19,13 @@ export const CardWrapper = styled.div`
     "image text text"
    
   }
+  &.non-margin {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom:0px !important;
+    margin-bottom: 90px;
+   
+  }
   &.bigger {
     grid-template-columns: 1800px;
     text-align: center;
@@ -63,7 +70,8 @@ export const CardWrapper = styled.div`
     margin-bottom: 20vh;
     padding-left: 0;
     grid-template-rows: 200px 80px;
-    grid-template-columns: none;
+    margin-top: 60px;
+    grid-template-columns: 140px;
 
   }
   &.non-image{

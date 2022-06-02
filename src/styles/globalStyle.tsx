@@ -296,6 +296,15 @@ export const Section = styled.main`
   background-color: ${({ theme }) => theme.color.black};
 `
 
+export const BlackMain = styled.main`
+  width: 100%;
+  height: 100%;
+  background-color: ${({ theme }) => theme.color.black};  
+ @media (max-width: ${({ theme }) => theme.device.mobile}) {
+  height: 100vh;
+
+}
+`
 export const PageContent = styled.div`
   width: 100%;
   height: 100%;
@@ -443,6 +452,7 @@ export const CardContainer = styled.div`
   export const Content = styled.div`
   width: 100%;
   padding-top: 1rem;
+  padding-bottom: 20px;
  
   `
 
@@ -456,6 +466,10 @@ export const CardContainer = styled.div`
   &.top {
     display: grid;
     margin-top:90px;
+  }
+  &.no-top {
+    display: grid;
+    margin-top:0px !important;
   }
 `;
 
