@@ -21,7 +21,7 @@ const MyStreams: React.FunctionComponent<MyStreamsProps> = () => {
         <ButtonsContain>
           <Alignment>
             <ImageButton>
-            <Link to="/scheduleStream"><PlayIcon/></Link>
+            <Link to="/selectDate"><PlayIcon/></Link>
             </ImageButton>
             <TextLine>
                 SCHEDULE STREAM

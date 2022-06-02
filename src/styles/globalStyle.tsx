@@ -205,6 +205,10 @@ justify-content: center;
 align-items: center;
 `
 
+export const Container = styled.div`
+margin-top:200px;
+`
+
 export const TextLine = styled.div`
 @media (max-width: ${({ theme }) => theme.device.mobile}) {
   font-size:14px;
@@ -332,6 +336,17 @@ export const TitleContainer = styled.div`
    }
   }
 
+  &.sub {
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 0;
+  padding-top: 0;
+
+   }
+  }
+ 
+
 `
 
 export const ButtonsContain = styled.div`
@@ -438,6 +453,10 @@ export const CardContainer = styled.div`
   align-items: center;
   justify-content: space-evenly;
   background: #0000;
+  &.top {
+    display: grid;
+    margin-top:90px;
+  }
 `;
 
 export const Title = styled.h3`
@@ -458,7 +477,13 @@ export const Title = styled.h3`
   }
 
   &.dark {
-   color: white;
+    font-size:16px;
+    color: white;
+    margin-left: 0;
+    margin-bottom: 0;
+    @media (max-width: ${({ theme }) => theme.device.mobile}) {
+      font-size: 12px;
+    }
   }
 
   &.item-font {

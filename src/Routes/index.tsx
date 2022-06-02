@@ -7,6 +7,9 @@ import Profile from "../pages/profile/Profile";
 import ProtectedRoute from "./ProtectedRoute";
 import Shop from "../pages/Shop";
 import ScheduleStream from "../pages/schedule/ScheduleStream";
+import SelectDate from "../pages/schedule/SelectDate";
+import UpploadImage from "../pages/schedule/UpploadImage";
+import UserInfo from "../pages/schedule/UserInfo";
 
 export const AppRouter = (): JSX.Element => {
   return (
@@ -24,6 +27,9 @@ export const AppRouter = (): JSX.Element => {
       />
       <Route path="/shop" element={<Shop />} />
       <Route path="/scheduleStream" element={<ScheduleStream />} />
+      <Route path="/selectDate" element={<SelectDate />} />
+      <Route path="/upploadImage" element={<UpploadImage />} />
+      <Route path="/userInfo" element={<UserInfo />} />
     </Routes>
   );
 };

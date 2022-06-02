@@ -1,11 +1,12 @@
 import Header from "../../components/Header/header";
 import { Link } from "react-router-dom";
 import ArrowIcon from "../../ui-kit/icons/arrow";
-import { Button, Section,CardWrap, Content, Title, TitleContainer } from "../../styles/globalStyle";
+import { Button, Section,CardWrap, Content } from "../../styles/globalStyle";
 import { Card } from "../../components/Card/card";
 import * as React from 'react';
+import Uppload from '../../components/Uppload/uppload'
 
-const ScheduleStream = () => {
+const UpploadImage = () => {
     
   return (
     <> 
@@ -13,12 +14,14 @@ const ScheduleStream = () => {
        <Header className="withIcon" 
         logo={ <Link to="/"><ArrowIcon/> </Link>}
         text={"SCHEDULE A STREAM"}/> 
-        <CardWrap>
-          <Card  title={"your title will go here"} name={'ASHLEY BENSON'} imgUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ashley_Benson_2012.jpg/640px-Ashley_Benson_2012.jpg'} description={'your descrption will be in this cell, up to 4 lines long.'} className={"small break edit top white black font-m"} withButton={false} buttonText={""}/>
+        <CardWrap className="top"> 
+           <Uppload/> 
+          <Card withoutImage title={"your title will go here"} name={'ASHLEY BENSON'} description={'your descrption will be in this cell, up to 4 lines long.'} className={"small non-image break photo top white black font-m"} withButton={false} buttonText={""}/>
         </CardWrap>
+    
         <Content>
           <CardWrap>
-          <Link to="/userInfo">
+          <Link to="/scheduleStream">
           <Button className="tiny">
             NEXT
         </Button>
@@ -29,11 +32,12 @@ const ScheduleStream = () => {
             SAVE DRAFT
         </Button>  
        </CardWrap>    
-        </Content>  
+        </Content>
+     
     </Section>
     </>
   );
 };
 
-export default ScheduleStream;
+export default UpploadImage;
 
